@@ -5,7 +5,7 @@
 		validationMessages="@id('vmsgs')" -->
 		
 		<!-- <hlayout>count: <label value="@load(vm.count)" /></hlayout> -->
-		<a href="/principal/inicial.zul">
+		<a href="/live/inicial.zul">
 		<button label="Entrar!" />
 		</a>
 	</window>
