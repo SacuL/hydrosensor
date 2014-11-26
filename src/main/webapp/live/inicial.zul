@@ -1,0 +1,13 @@
+<?page title="Página Inicial" contentType="text/html;charset=UTF-8"?>
+<z:zk xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:z="http://www.zkoss.org/2005/zul">
+	<z:window title="Página Inicial" border="normal"
+		use="br.ufjf.hydronode.live.gui.GUIGrafico"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:z="http://www.zkoss.org/2005/zul">
+
+		<z:textbox id="textoTeste" />
+
+	</z:window>
+</z:zk>
+
