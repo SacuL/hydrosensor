@@ -1,17 +1,32 @@
 package br.ufjf.hydronode.live.gui;
 
-import org.zkoss.zul.Textbox;
-import org.zkoss.zul.Window;
+import org.zkoss.bind.annotation.BindingParam;
+import org.zkoss.bind.annotation.GlobalCommand;
+import org.zkoss.bind.annotation.Init;
+import org.zkoss.bind.annotation.NotifyChange;
+import org.zkoss.zul.PieModel;
 
-public class GUIGrafico extends Window {
+import br.ufjf.hydronode.live.model.SensorData;
 
-	private static final long serialVersionUID = -586007363669255483L;
+public class GUIGrafico  {
 
-	private Textbox textoTeste;
+	PieModel model;
 
-	public void onCreate() {
-		textoTeste = (Textbox) getFellow("textoTeste");
-		textoTeste.setText("Olá mundo!");
+	@Init
+	public void init() {
+		// prepare chart data
+		model = SensorData.getModel();
 	}
+
+	public PieModel getModel() {
+		return model;
+	}
+
+//	@GlobalCommand("dataChanged")
+//	@NotifyChange("model")
+//	public void onDataChanged(@BindingParam("category") String category,
+//			@BindingParam("num") Number num) {
+//		model.setValue(category, num);
+//	}
 
 }
